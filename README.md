@@ -12,6 +12,12 @@ A rectangular waveguide designed and simulated in **CST Studio Suite** operating
 
 ---
 
+## 📡 3D Waveguide Structure & Port Setup
+
+![Rectangular Waveguide 3D Model](geometry.png)
+
+---
+
 ## 📐 Design Specifications & CST Parameters
 
 - **Broad wall ($a$):** $30.083\text{ mm}$
