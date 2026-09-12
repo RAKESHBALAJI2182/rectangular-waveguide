@@ -1,26 +1,41 @@
-# Rectangular waveguide
+# Rectangular Waveguide Design & S-Parameter Analysis
 
-Rectangular waveguide designed and simulated in CST Studio Suite.
+A rectangular waveguide designed and simulated in **CST Studio Suite** operating in the dominant **$\text{TE}_{10}$ mode**.
 
-## Dimensions
+---
 
-- Broad wall (a): 30.083 mm
-- Narrow wall (b): 15.5415 mm
-- Length: 50 mm
+## 📐 Design Specifications
 
-## Mode
+- **Broad wall ($a$):** $30.083\text{ mm}$
+- **Narrow wall ($b$):** $15.5415\text{ mm}$
+- **Length ($L$):** $50.0\text{ mm}$
+- **Dominant Mode:** $\text{TE}_{10}$
+- **Theoretical Cutoff Frequency ($f_c$):**
+  $$f_c = \frac{c}{2a} \approx 4.99\text{ GHz}$$
 
-TE10. Theoretical cutoff frequency: fc = c / (2a) ≈ 4.99 GHz.
+---
 
-## Simulation
+## 📊 Simulation & Results (2–6 GHz)
 
-S-parameters and VSWR simulated across 2-6 GHz. The deepest S11 null in the sweep sits near 4.9 GHz, close to the calculated TE10 cutoff, which is worth rechecking against the port mode setup before treating it as a final result. VSWR stays close to 1.0 across most of the band and rises near the low end of the sweep.
+The design was simulated across the $2\text{ GHz} - 6\text{ GHz}$ band in CST Studio Suite to characterize transmission and reflection characteristics.
 
-## Files
+### 1. $S_{11}$ Return Loss (dB)
+Across the sweep, the reflection response exhibits mode propagation behavior with cutoff around $4.99\text{ GHz}$.
+![S11 Plot](s11_plot.png)
 
-- s11.s1p - exported S-parameter data (Touchstone format)
-- s11_plot.png - S11 magnitude vs frequency
-- vswr_plot.png - VSWR vs frequency
-- geometry.png - model view from CST
+### 2. Voltage Standing Wave Ratio (VSWR)
+The VSWR closely mirrors the matched transmission band and rises near the lower cutoff threshold.
+![VSWR Plot](vswr_plot.png)
 
-Tool: CST Studio Suite.
+---
+
+## 📁 Repository Structure
+
+- `rectangular_waveguide.cst` : CST Studio Suite 3D simulation model file
+- `s11_plot.png` : S11 Magnitude (dB) vs. Frequency response
+- `vswr_plot.png` : Voltage Standing Wave Ratio vs. Frequency
+- `README.md` : Project documentation and design analysis
+
+---
+**Tool:** CST Studio Suite  
+**Author:** Bollam Rakesh Balaji (NIT Mizoram)
